@@ -2,41 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <!--CSS-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-   <!--JS Bundle with Popper-->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   <title>Proyecto Felipegc</title>
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet"  href="/src/styles.css">
+  <!--Fontawesome-->
+  <script src="https://kit.fontawesome.com/de0a6ca792.js" crossorigin="anónimo"></script>
   </head>
-  <header>
+<body>
+  <!--JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+ </body>
+   <header>
 <!--Logo-->
-<div class="row">
-  <div class="container">
-  <div class="logo"> 
-      <img src="assets/APLogo.png" alt="logo de Argentina Programa">
+<nav class="navbar nabvar-expand-lg bg-black">
+<div class="container-fluid"> 
+  <a class="navbar-brand" href="/src/index.html">
+    <img src="assets/APLogo.png" id="APlogo" alt="logo de Argentina Programa" class="w-100">
+  </a>
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><i class="fa-brands fa-twitter fa-2xl"></i></li>
+    <li class="list-group-item"><i class="fa-brands fa-linkedin fa-2xl"></i></li>
+  <li class="list-group-item"><i class="fa-brands fa-instagram fa-2xl"></i></li>
+  <li class="list-group-item">
+    <!-- Button boton que envie al login -->
+        <a href="/src/login.html"><i class="fa-solid fa-user-lock fa-xs"></i></a>
+    </button>
+  </li>
+</ul>
+</div>
+</nav> 
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Inicio sesión</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!--saqué el modal body con form para poner en el login html-->
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Ingresar</button>
+        </div>
+    </div>
   </div>
-  <div class="redes">
-           <a href=""><img src="assets/twitter.png" id="twitter" alt="Logo de twitter"></a>
-          <a href=""><img src="assets/linkedin.png" id="linkedin" alt="Logo de linkedin"></a>
-          <a href=""><img src="assets/instagram.png" id="instagram" alt="Logo de instagram"></a>
-          <button type="button" class="btn btn-outline-light">INGRESO</button>
-          </div>
-  </div>
-  </div>
-    </header>
+</div>
+ </header>
      <body>
       <!--banner-->
-      <div style="text-align: center;">
-        <img src="assets/banner.jpg" alt="banner">
-    </div>
-    <!--Acerca de mi-->
+      <div class="logobanner">  <img src="assets/banner.jpg" alt="banner"> 
+       </div>
+           <!--Acerca de mi-->
     <div class="row">
       <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-      <img src="assets/Felipe Garcia Carzoglio.png" class="img-fluid" id="fotodeperfil" alt="Foto de Perfil">
+      <img src="assets/Felipe Garcia Carzoglio.png" class="img-fluid" id="fotodeperfil" alt="foto de perfil">
       </div>
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
       <p id="nombre">Felipe Garcia Carzoglio</p>
@@ -45,133 +67,87 @@
   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
       <span>
           <h2>Acerca de mí</h2>
-          <p>Soy una persona creativa con espíritu positivo, me destaco
-            por mi responsabilidad de trabajo</p><p>y ganas de desarrollarme en equipo. Me gusta afrontar nuevos desafíos.</p> 
+          <form> 
+            <div class="btn-edit"  onclick=""><class="btn-right"><i class="fa-solid fa-pen"></i></a></div>
+            <button type="button" class="btn-close" aria-label="Close"></button></form>
+                      <p>Soy una persona creativa con espíritu positivo, me destaco
+              por mi responsabilidad de trabajo</p><p>y ganas de desarrollarme en equipo. Me gusta afrontar nuevos desafíos.</p> 
       </span>
   </div>
   </div>
-  <!--Educacion-->
-    <div class="row">
-     <h1>Educación</h1>
-    <div class="col-lg-11">
-    <ul>
-    <li><h2>Títulos</h2><h3> Bachiller en Economía y Adminitración - Instituto Privado Ntra.Sra. de la Misericordia</h3><p>Año 2021</p></li>
-    <li><h3>Inglés - First Certificate -Cambridge English</h3><p>Año 2022</p></li>
-    <li><h3> Programación Web Full Stack - Digital House</h3><p>Año 2022</p></li> 
-    <li><h2>Certificados</h2><h3>Plan Argentina Programa -SeProgramar</h3><p>Año 2022</p></li>
-    <li><h3>XX Congreso Internacional en Innovación Tecnológica Informática 2022 - Facultad de Tecnología Informática y Centro de Altos Estudios en Tecnología Informática de la UAI.</h3><p> Año 2022</p></li>
-    <li><h2>Estudios en curso</h2><h3>1er Año Licenciatura en Gestión de Tecnología Informática - Universidad Abierta Interamericana.</h3><p>Año 2023</p></li>
-    </ul> 
-    </div>
-   </div>
-   <!--Experiencia-->
+       <!--Experiencia-->
    <div class="row">
-    <h1>Experiencia</h1>
-    <div class="col-lg-11">
+      <h1>Experiencia</h1>
+    <div class="col-lg-12">
     <ul>
-    <li><h2>Data Entry </h2>  <h3> Freelance - Home Office</h3><p>Año 2023<p></li>
+      <form> 
+        <div class="btn-edit"  onclick=""><class="btn-right"><i class="fa-solid fa-pen"></i></a></div>
+        <button type="button" class="btn-close" aria-label="Close"></button></form>
+    <li><h2>Data Entry </h2> <p> Freelance - Home Office</p><p>Año 2023<p></li>
     </ul>
     </div>
    </div>
-   <!--Proyectos-->
+   <!--Educacion-->
    <div class="row">
-    <h1>Proyectos</h1>
-    <div class="contenedor">
+    <h1>Educación</h1>
+   <div class="col-lg-12">
+   <ul>
+    <form> 
+      <div class="btn-edit"  onclick=""><class="btn-right"><i class="fa-solid fa-pen"></i></a></div>
+      <button type="button" class="btn-close" aria-label="Close"></button></form>
+   <li><h2>Títulos</h2><h3> Bachiller en Economía y Adminitración</h3> <p>Instituto Privado Ntra.Sra. de la Misericordia</p><p>Año 2021</p></li>
+   <li><h3>First Certificate</h3> <p>Cambridge English</p><p>Año 2021</p></li>
+   <li><h3>Programación Web Full Stack</h3> <p>Digital House</p> <p>Año 2022</p></li> 
+   <li><h2>Certificados</h2><h3>Plan Argentina Programa</h3> <p>SeProgramar</p> <p>Año 2022</p></li>
+   <li><h3>XX Congreso Internacional en Innovación Tecnológica Informática 2022</h3><p>Facultad de Tecnología Informática y Centro de Altos Estudios en Tecnología Informática de la UAI.</p><p> Año 2022</p></li>
+    <li><h2>Estudios en curso</h2><h3>1er Año Licenciatura en Gestión de Tecnología Informática</h3> <p>Universidad Abierta Interamericana.</p> <p>Año 2023</p></li>
+   </ul> 
+   </div>
+  </div>
+  <!--hys-->
+             <div  class="circu">
+              <h1>Hard & Soft Skills</h1>
+      <div class="item" id="item1">
+        <h3>Inglés</h3><p>100%</p>
+            </div> 
+            <div class="item" id="item2">
+              <h3>JS - Boostrap</h3><p>80% </p>
+            </div>
+            <div class="item" id="item3">
+              <h3>Trabajo en equipo</h3><p>100%</p>
+            </div>
+            <div class="item" id="item4">
+              <h3>Vida saludable - Fitness</h3><p>100%</p>
+            </div>
+            <div class="item" id="item5">
+            <h3>CSS - GitHub</h3><p>90%</p>
+            </div>
+            <div class="item" id="item6">
+            <h3>HTML</h3><p>100%</p>
+      </div>
+    </div>
+     <!--Proyectos-->
+   <div class="row">
+        <h1>Proyectos</h1>
+        <form> 
+          <div class="btn-edit"  onclick=""><class="btn-right"><i class="fa-solid fa-pen"></i></a></div>
+          <button type="button" class="btn-close" aria-label="Close"></button></form>
+        <div class="contenedor">
     <div class="col-sm-12 col-md-7 col-lg-7 part1">
     <ul>
-    <li><h1>Fruver</h1><p>Año 2021<p>
+    <li><h1>Fruver</h1><p>Año 2021 - Actualmente en proceso - Sin link a su evidencia -<p>
+      <p>Proyecto de creación y adapatación de app para delivery de frutas y verduras.</p>
     <p>La huerta en tu casa</p> </li> 
     <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-    <img src="assets/FRUVER.jpg" class="img-fluid img-proyecto">
+    <img src="assets/FRUVER.jpg" class="img-fluid img-proyecto" alt="imagen de proyecto">
     </div>
-    <!--hys-->
-    <div class="row">
-        <h1>Hard & Soft Skills</h1>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <circle-progress
-            [percent]="100"
-            [radius]="100"
-            [title]="'HTML'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]='"#700000"'
-            [innerStrokeColor]='"#C7E596"'
-            [animation]="true"
-            [animationDuration]="300"
-              ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <circle-progress
-            [percent]="90"
-            [radius]="100"
-            [title]="'CSS'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]='"#700000"'
-            [innerStrokeColor]='"#C7E596"'
-            [animation]="true"
-            [animationDuration]="300"
-             ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <circle-progress
-            [percent]="90"
-            [radius]="100"
-            [title]="'JS'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]='"#700000"'
-            [innerStrokeColor]='"#C7E596"'
-            [animation]="true"
-            [animationDuration]="300"
-             ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <circle-progress
-            [percent]="90"
-            [radius]="100"
-            [title]="'GitHub'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]='"#700000"'
-            [innerStrokeColor]='"#C7E596"'
-            [animation]="true"
-            [animationDuration]="300"
-             ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <circle-progress
-            [percent]="100"
-            [radius]="100"
-            [title]="'Inglés'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]='"#700000"'
-            [innerStrokeColor]='"#C7E596"'
-            [animation]="true"
-            [animationDuration]="300"
-             ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-            <circle-progress
-            [percent]="100"
-            [radius]="100"
-            [title]="'Trabajo Equipo'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]='"#700000"'
-            [innerStrokeColor]='"#C7E596"'
-            [animation]="true"
-            [animationDuration]="300"
-             ></circle-progress>
-        </div>
-       </div>
-     <!--Footer-->
+        <!-- Modal cortado que funcionaba para usar este otro -->
+        <!--Footer-->
      <div class="row">
       <footer>
           <P>Felipe Garcia Carzoglio | Argentina Programa 2023</P>
-          <p>Buenos Aires, Argentina</p>
+          <p>Copy Copyright  - Buenos Aires, Argentina</p>
       </footer>
     </div>
-    </body>
+  </body>
       </html>
